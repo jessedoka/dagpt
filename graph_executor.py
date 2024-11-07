@@ -53,7 +53,7 @@ class GraphExecutor:
             logger.info(f"Output for node {node.id} validated successfully \n {output}")
         else:
             logger.error(f"Output for node {node.id} failed validation \n {validation}")
-            return
+            raise Exception(f"Validation failed for node {node.id}: {validation}")
 
         # TODO: 4. Store the output
 
